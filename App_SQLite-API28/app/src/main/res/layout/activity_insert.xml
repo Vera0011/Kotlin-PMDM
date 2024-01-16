@@ -19,15 +19,15 @@
 
     <LinearLayout
         android:id="@+id/layoutDatos"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true">
+        android:layout_centerInParent="true"
+        android:layout_marginRight="130sp"
+        android:orientation="vertical">
 
         <EditText
             android:id="@+id/editTextText"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15sp"
             android:backgroundTint="#000000"
@@ -37,7 +37,7 @@
 
         <EditText
             android:id="@+id/editTextText2"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15sp"
             android:backgroundTint="#000000"
@@ -47,7 +47,7 @@
 
         <EditText
             android:id="@+id/editTextNumber"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15sp"
             android:backgroundTint="#000000"
@@ -57,7 +57,7 @@
 
         <EditText
             android:id="@+id/editTextText3"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15sp"
             android:ems="10"
@@ -66,7 +66,7 @@
 
         <EditText
             android:id="@+id/editTextNumber2"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15sp"
             android:ems="10"
@@ -75,18 +75,39 @@
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="120sp"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/layoutDatos"
+        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30sp"
-        android:backgroundTint="@color/black"
-        android:hint="@string/insertar2"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#FFFFFF"
-        android:textSize="16sp"
-        app:cornerRadius="5sp" />
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="100sp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30sp"
+            android:layout_marginRight="18sp"
+            android:backgroundTint="@color/black"
+            android:text="Volver"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textSize="14sp"
+            app:cornerRadius="5sp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="100sp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18sp"
+            android:layout_marginTop="30sp"
+            android:backgroundTint="@color/black"
+            android:hint="@string/insertar2"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textSize="14sp"
+            app:cornerRadius="5sp" />
+    </LinearLayout>
 
 </RelativeLayout>

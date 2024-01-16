@@ -15,13 +15,18 @@ class SelectActivity : AppCompatActivity()
     {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_select)
+    }
 
-        /** val btnNavigate: Button = findViewById(R.id.insert)
+    override fun onStart()
+    {
+        super.onStart()
+        val btnNavigate: Button = findViewById(R.id.insert)
 
         btnNavigate.setOnClickListener(View.OnClickListener {
             // Create an Intent to start SecondActivity
             val intent = Intent(this@SelectActivity, InsertActivity::class.java)
-            startActivity(intent)
-        })*/
+            this.finish();
+            startActivity(intent);
+        })
     }
 }
