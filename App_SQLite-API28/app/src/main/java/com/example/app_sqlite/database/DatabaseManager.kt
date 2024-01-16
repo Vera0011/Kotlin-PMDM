@@ -1,6 +1,8 @@
 package com.example.app_sqlite.database
 
+import android.content.ContentValues
 import android.content.Context
+import android.database.Cursor
 import android.database.SQLException
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
@@ -38,18 +40,24 @@ class DatabaseManager(context: Context) : SQLiteOpenHelper(context, "app_sqlite.
         }
     }
 
-    fun openWriteDatabase() : SQLiteDatabase
+    fun insert(params : ContentValues)
     {
-        return writableDatabase;
+        this.writableDatabase.insert("Users", null, params);
+        this.close();
     }
 
-    fun closeDatabase()
+    fun select(sql : String, params : Array<String>) : Cursor
     {
-        close();
+        return this.readableDatabase.rawQuery(sql, params);
     }
 
-    fun openReadDatabase() : SQLiteDatabase
+    fun delete()
     {
-        return readableDatabase;
+
+    }
+
+    fun update()
+    {
+
     }
 }
