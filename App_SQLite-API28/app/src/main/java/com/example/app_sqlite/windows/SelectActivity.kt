@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import com.example.app_sqlite.R
+import com.example.app_sqlite.database.DatabaseManager
 
 
 class SelectActivity : AppCompatActivity()
