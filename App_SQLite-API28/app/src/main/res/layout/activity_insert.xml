@@ -1,118 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".windows.InsertActivity">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/layoutDatos"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40sp"
+        android:text="@string/rellene_los_siguientes_campos"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
-        <RelativeLayout
+    <LinearLayout
+        android:id="@+id/layoutDatos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+        <EditText
+            android:id="@+id/editTextText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/layoutDNI">
+            android:layout_marginBottom="15sp"
+            android:backgroundTint="#000000"
+            android:ems="10"
+            android:hint="@string/dni"
+            android:inputType="text" />
 
-            <EditText
-                android:id="@+id/editTextText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="text"
-                android:text="Name" />
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
-        </RelativeLayout>
-
-        <RelativeLayout
+        <EditText
+            android:id="@+id/editTextText2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/layoutNombre">
+            android:layout_marginBottom="15sp"
+            android:backgroundTint="#000000"
+            android:ems="10"
+            android:hint="@string/nombre"
+            android:inputType="text" />
 
-            <EditText
-                android:id="@+id/editTextText2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="text"
-                android:text="Name" />
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
-        </RelativeLayout>
-
-        <RelativeLayout
+        <EditText
+            android:id="@+id/editTextNumber"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/layoutEdad">
+            android:layout_marginBottom="15sp"
+            android:backgroundTint="#000000"
+            android:ems="10"
+            android:hint="@string/edad"
+            android:inputType="number" />
 
-            <EditText
-                android:id="@+id/editTextNumber"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="number" />
-
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
-        </RelativeLayout>
-
-        <RelativeLayout
+        <EditText
+            android:id="@+id/editTextText3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/layoutProfesion">
+            android:layout_marginBottom="15sp"
+            android:ems="10"
+            android:hint="@string/profesi_n"
+            android:inputType="text" />
 
-            <EditText
-                android:id="@+id/editTextText3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="text"
-                android:text="Name" />
-
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
-        </RelativeLayout>
-
-        <RelativeLayout
+        <EditText
+            android:id="@+id/editTextNumber2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/layoutSalario">
+            android:layout_marginBottom="15sp"
+            android:ems="10"
+            android:hint="@string/salario"
+            android:inputType="number" />
 
-            <EditText
-                android:id="@+id/editTextNumber2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="number" />
+    </LinearLayout>
 
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
-        </RelativeLayout>
+    <Button
+        android:id="@+id/button"
+        android:layout_width="120sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutDatos"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30sp"
+        android:backgroundTint="@color/black"
+        android:hint="@string/insertar2"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textSize="16sp"
+        app:cornerRadius="5sp" />
 
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Rellene los siguientes campos:" />
-
-    </RelativeLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
