@@ -11,7 +11,5 @@ class SelectActivity : AppCompatActivity()
     {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_select)
-
-        DatabaseManager(this);
     }
 }

@@ -6,8 +6,8 @@ class UserDAO
 {
     private lateinit var databaseManager : DatabaseManager;
 
-    constructor()
+    public UserDAO()
     {
-
+        
     }
 }
