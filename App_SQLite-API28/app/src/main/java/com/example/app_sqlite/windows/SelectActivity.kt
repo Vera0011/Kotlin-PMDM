@@ -14,10 +14,10 @@ class SelectActivity : AppCompatActivity()
     override fun onCreate(savedInstanceState: Bundle?)
     {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_select)
+        setContentView(R.layout.activity_search)
     }
 
-    override fun onStart()
+    /**override fun onStart()
     {
         super.onStart()
         val btnNavigate: Button = findViewById(R.id.insert)
@@ -28,5 +28,5 @@ class SelectActivity : AppCompatActivity()
             this.finish();
             startActivity(intent);
         })
-    }
+    }*/
 }
