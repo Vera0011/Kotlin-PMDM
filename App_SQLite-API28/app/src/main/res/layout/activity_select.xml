@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:backgroundTint="#FFFFFF"
+    android:orientation="vertical"
+    android:padding="70sp"
+    tools:context=".windows.SelectActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/layout"
+        android:layout_marginBottom="30sp"
+        android:gravity="center|center_vertical"
+        android:text="Elija una opción:"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        tools:ignore="NotSibling" />
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <Button
+            android:id="@+id/insert"
+            android:layout_width="100sp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20sp"
+            android:layout_marginBottom="15sp"
+            android:backgroundTint="#000000"
+            android:text="Insertar"
+            app:cornerRadius="5sp" />
+
+        <Button
+            android:id="@+id/search"
+            android:layout_width="100sp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/insert"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="#000000"
+            android:text="Buscar"
+            app:cornerRadius="5sp" />
+    </RelativeLayout>
+
+</RelativeLayout>
