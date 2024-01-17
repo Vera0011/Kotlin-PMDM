@@ -43,7 +43,6 @@ class DatabaseManager(context: Context) : SQLiteOpenHelper(context, "app_sqlite.
     fun insert(params : ContentValues)
     {
         this.writableDatabase.insert("Users", null, params);
-        this.close();
     }
 
     fun select(sql : String, params : Array<String>) : Cursor
@@ -51,13 +50,13 @@ class DatabaseManager(context: Context) : SQLiteOpenHelper(context, "app_sqlite.
         return this.readableDatabase.rawQuery(sql, params);
     }
 
-    fun delete()
+    fun update(params : ContentValues, pk_old_user : String)
     {
-
+        this.writableDatabase.update("Users", params, "dni = ?", arrayOf(pk_old_user));
     }
 
-    fun update()
+    fun delete(pk_old_user : String)
     {
-
+        this.writableDatabase.delete("Users", "dni = ?", arrayOf(pk_old_user));
     }
 }

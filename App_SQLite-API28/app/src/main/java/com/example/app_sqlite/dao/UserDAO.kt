@@ -3,13 +3,13 @@ package com.example.app_sqlite.dao
 import android.content.ContentValues
 import android.content.Context
 import android.database.Cursor
-import android.database.sqlite.SQLiteDatabase
+
 import com.example.app_sqlite.database.DatabaseManager
 import com.example.app_sqlite.dto.UserDTO
 
 class UserDAO
 {
-    private lateinit var databaseManager : DatabaseManager;
+    private var databaseManager : DatabaseManager;
 
     constructor(context : Context)
     {
@@ -66,12 +66,20 @@ class UserDAO
 
     fun update(oldUser : UserDTO, newUser : UserDTO)
     {
+        val values = ContentValues();
 
+        values.put("dni", newUser.dni);
+        values.put("name", newUser.name);
+        values.put("age", newUser.age);
+        values.put("profession", newUser.profession);
+        values.put("salary", newUser.salary);
+
+        databaseManager.update(values, oldUser.dni);
     }
 
     fun delete(oldUser: UserDTO)
     {
-        
+        databaseManager.delete(oldUser.dni);
     }
 
     private fun createUser(cursor : Cursor) : UserDTO
